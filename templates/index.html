@@ -1,20 +1,107 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %}Home - Performance Tracker{% endblock %}
+
 {% block content %}
-<div class="container-fluid px-0">
+    <!-- Hero Section with Image -->
+    <section class="w-full bg-gray-900 py-20">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left md:w-1/2">
+                <h1 class="text-5xl text-orange-500 font-bold">Track Employee Performance Effectively</h1>
+                <p class="mt-4 text-gray-400">Monitor, analyze, and enhance performance across departments with advanced metrics.</p>
+                <button class="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition duration-300">Get Started</button>
+            </div>
+            <div class="mt-8 md:mt-0 md:w-1/2">
+                <img src="https://www.techfunnel.com/wp-content/uploads/2019/08/Benefits-of-Performance-Management-for-Organization-and-Employees-1.png" alt="Performance Tracker" class="rounded-lg shadow-lg w-full">
+            </div>
+        </div>
+    </section>
 
-</div>
-<div class="container py-5">
+    <!-- Features Section -->
+    <section class="w-full bg-gray-800 py-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+                <h2 class="text-3xl text-orange-500 font-semibold">Detailed Analytics</h2>
+                <p class="mt-4 text-gray-400">Gain insights into employee performance with comprehensive data analysis.</p>
+            </div>
+            <div>
+                <h2 class="text-3xl text-orange-500 font-semibold">Comparative Metrics</h2>
+                <p class="mt-4 text-gray-400">Compare employee performance across departments and individual metrics.</p>
+            </div>
+            <div>
+                <h2 class="text-3xl text-orange-500 font-semibold">Performance Tracking</h2>
+                <p class="mt-4 text-gray-400">Monitor real-time performance and enhance productivity with actionable insights.</p>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- About Section with Image -->
+    <section class="w-full bg-gray-900 py-16">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl text-orange-500 font-bold">Why Choose Our Tracker?</h2>
+                <p class="mt-6 text-gray-400 ">Our performance tracker helps businesses streamline operations and improve employee engagement.</p>
+            </div>
+            <div class="mt-8 md:mt-0 md:w-1/2">
+                <img src="https://www.edenhealth.com/blog/wp-content/uploads/sites/1/2021/07/bn_improve-employee-performance.jpg" alt="Why Choose Us" class="rounded-lg shadow-lg w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="w-full bg-gray-800 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl text-orange-500 font-bold text-center">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 text-center">
+                <div class="p-6 bg-gray-900 rounded-lg">
+                    <img src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/004.webp" alt="Client 1" class="rounded-full w-16 h-16 mx-auto mb-4">
+                    <p class="text-gray-400">"The performance tracker completely transformed how we monitor productivity."</p>
+                    <h3 class="mt-4 text-orange-500 font-bold">- Sarah J.</h3>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-lg">
+                    <img src="https://cdn2.f-cdn.com/files/download/40990929/88eaef.jpg" alt="Client 2" class="rounded-full w-16 h-16 mx-auto mb-4">
+                    <p class="text-gray-400">"It provides the insights we need to make better decisions."</p>
+                    <h3 class="mt-4 text-orange-500 font-bold">- Michael D.</h3>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-lg">
+                    <img src="http://writestylesonline.com/wp-content/uploads/2016/08/Follow-These-Steps-for-a-Flawless-Professional-Profile-Picture-1024x1024.jpg" alt="Client 3" class="rounded-full w-16 h-16 mx-auto mb-4">
+                    <p class="text-gray-400">"A game changer in terms of employee performance and productivity."</p>
+                    <h3 class="mt-4 text-orange-500 font-bold">- Emma K.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="w-full bg-gray-900 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl text-orange-500 font-bold">How It Works</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="bg-orange-500 text-white p-4 rounded-full w-16 h-16 mx-auto flex items-center justify-center text-2xl">1</div>
+                    <h3 class="mt-4 text-2xl font-semibold">Sign Up</h3>
+                    <p class="mt-2 text-gray-400">Create your account and get access to the performance tracking system.</p>
+                </div>
+                <div>
+                    <div class="bg-orange-500 text-white p-4 rounded-full w-16 h-16 mx-auto flex items-center justify-center text-2xl">2</div>
+                    <h3 class="mt-4 text-2xl font-semibold">Add Employees</h3>
+                    <p class="mt-2 text-gray-400">Input employee data and start tracking their performance.</p>
+                </div>
+                <div>
+                    <div class="bg-orange-500 text-white p-4 rounded-full w-16 h-16 mx-auto flex items-center justify-center text-2xl">3</div>
+                    <h3 class="mt-4 text-2xl font-semibold">Analyze Data</h3>
+                    <p class="mt-2 text-gray-400">Analyze performance metrics and generate reports for insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section with Background Image -->
+    <section class="w-full bg-gray-800 py-16" style="background-image: url('/static/images/cta-background.jpg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl text-orange-500 font-bold">Get Started Today!</h2>
+            <p class="mt-4 text-gray-400">Sign up to start tracking employee performance and improving productivity.</p>
+            <button class="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition duration-300">Sign Up</button>
+        </div>
+    </section>
 {% endblock %}
-{% block js %}
-<script>
-
-</script>
-{% endblock %}
-{% block css %}
-<style>
-
-</style>
-{% endblock %}
-{% block head %}{% endblock %}

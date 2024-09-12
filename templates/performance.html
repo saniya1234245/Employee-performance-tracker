@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Performance{% endblock %}
+
+{% block content %}
+<div class="bg-white p-8 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold mb-4">Analysis 1: Employee Performance Ratings</h1>
+    <div class="mb-8">
+        <h2 class="text-xl font-bold mb-2">Performance Ratings for Employees</h2>
+        {{ scatter_plot|safe }}
+    </div>
+</div>
+{% endblock %}

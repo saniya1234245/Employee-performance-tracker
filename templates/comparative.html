@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Comparative Analysis{% endblock %}
+
+{% block content %}
+<div class="bg-white p-8 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold mb-4">Comparative Analysis</h1>
+
+    <!-- Scatter Plot -->
+    <div class="mb-8">
+        <h2 class="text-xl font-bold mb-2">Scatter Plot: Performance by Department</h2>
+        {{ scatter_plot|safe }}
+    </div>
+
+    <!-- Bar Chart -->
+    <div class="mb-8">
+        <h2 class="text-xl font-bold mb-2">Bar Chart: Average Performance per Department</h2>
+        {{ bar_plot|safe }}
+    </div>
+
+    <!-- Histogram -->
+    <div>
+        <h2 class="text-xl font-bold mb-2">Histogram: Distribution of Performance Ratings</h2>
+        {{ hist_plot|safe }}
+    </div>
+</div>
+{% endblock %}
