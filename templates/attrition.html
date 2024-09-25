@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Attrition and Salary Insights</h2>
+<img src="{{ url_for('static', filename='charts/attrition_vs_income.png') }}" alt="Attrition vs Salary">
+<p>The chart shows salary trends and attrition rates across the company.</p>
+{% endblock %}

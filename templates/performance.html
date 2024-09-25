@@ -1,12 +1,49 @@
 {% extends "base.html" %}
-{% block title %}Performance{% endblock %}
+
+{% block title %}Performance Analysis{% endblock %}
 
 {% block content %}
-<div class="bg-white p-8 rounded-lg shadow-lg">
-    <h1 class="text-3xl font-bold mb-4">Analysis 1: Employee Performance Ratings</h1>
-    <div class="mb-8">
-        <h2 class="text-xl font-bold mb-2">Performance Ratings for Employees</h2>
-        {{ scatter_plot|safe }}
+<!-- Hero Section -->
+<section class="hero py-24 h-[80vh]" style="background-image: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Business_Analysis_And_Why_Every_Company_Needs_A_Business_Analyst.jpg'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-8xl font-bold text-orange-600 animate__animated animate__fadeInDown" style="text-shadow: 2px 2px 5px white;">
+            Performance Analysis
+        </h1>
+        <p class="mt-10 text-white font-bold text-lg text-gray-900 max-w-2xl mx-auto bg-orange-600 bg-opacity-80 rounded-lg p-6 animate__animated animate__fadeInUp">
+            Gain insights into employee performance through comprehensive data on job involvement, satisfaction, and ratings. This analysis provides valuable information for optimizing workforce productivity and engagement.
+        </p>   
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<div class="mt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Performance Data Analysis Content -->
+    <div class="mb-12">
+        <h2 class="text-4xl font-semibold text-orange-500 mb-4 animate__animated animate__fadeInLeft">
+            Key Performance Metrics
+        </h2>
+        <p class="text-gray-300 text-lg leading-relaxed animate__animated animate__fadeInRight">
+            The performance analysis is based on factors like job involvement, performance rating, and overall satisfaction. These metrics are used to monitor employee progress, drive engagement, and improve productivity across departments.
+        </p>
+    </div>
+
+    <!-- Performance Rating Chart (Placeholder) -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-12 animate__animated animate__fadeInUp">
+        <h3 class="text-2xl font-semibold text-orange-500 mb-4">Performance Rating Distribution</h3>
+        <div id="performance-rating-chart" class="h-64">
+            <!-- Placeholder for chart -->
+            <canvas id="ratingChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Job Involvement Chart (Placeholder) -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-12 animate__animated animate__fadeInUp">
+        <h3 class="text-2xl font-semibold text-orange-500 mb-4">Job Involvement Overview</h3>
+        <div id="job-involvement-chart" class="h-64">
+            <!-- Placeholder for chart -->
+            <canvas id="involvementChart"></canvas>
+        </div>
     </div>
 </div>
 {% endblock %}
+

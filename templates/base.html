@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Flask App{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -16,10 +18,10 @@
             <!-- Navigation Links -->
             <div class="hidden md:flex space-x-8 text-white">
                 <a href="/" class="hover:text-orange-500 transition duration-300">Home</a>
+                <a href="/demographics" class="hover:text-orange-500 transition duration-300">Demographics Analysis</a>
                 <a href="/performance" class="hover:text-orange-500 transition duration-300">Performance Analysis</a>
-                <a href="/department" class="hover:text-orange-500 transition duration-300">Department Analysis</a>
-                <a href="/comparative" class="hover:text-orange-500 transition duration-300">Comparative Analysis</a>
-                <a href="/contact" class="hover:text-orange-500 transition duration-300">Contact Us</a>
+                <a href="/satisfaction" class="hover:text-orange-500 transition duration-300">Satisfaction Analysis</a>
+                <a href="/attrition" class="hover:text-orange-500 transition duration-300">Attrition Analysis</a>
             </div>   
         </div>
     </nav>

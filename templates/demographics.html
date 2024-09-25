@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Full Page Container -->
+<div class="min-h-screen bg-gray-900 text-white">
+
+    <!-- Hero Section -->
+    <section class="hero py-24 h-[80vh]" style="background-image: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Business_Analysis_And_Why_Every_Company_Needs_A_Business_Analyst.jpg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-8xl font-bold text-orange-600 animate__animated animate__fadeInDown" style="text-shadow: 2px 2px 5px white;">
+                Employee Demographics
+            </h1>
+            <p class="mt-10 text-white font-bold text-lg text-gray-900 max-w-2xl mx-auto bg-orange-600 bg-opacity-80 rounded-lg p-6 animate__animated animate__fadeInUp">
+                Discover insights into our workforce composition, including age distribution, education levels, and work-life balance. This analysis helps identify the factors that contribute to employee satisfaction and retention.
+            </p>   
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="demographics" class="py-16 px-6 bg-gray-900">
+        <!-- Grid Layout for Chart and Insights -->
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <!-- Insight Content -->
+            <div class="flex flex-col justify-center animate__animated animate__fadeInLeft">
+                <h2 class="text-3xl font-bold text-orange-400 mb-6">Key Demographic Insights</h2>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Analyzing employee demographics is vital for making strategic decisions on workforce development, diversity, 
+                    and retention efforts. Here are some insights based on the data:
+                </p>
+                <ul class="list-disc list-inside text-gray-300 mb-6">
+                    <li class="mb-3">Average employee age is 35 years, indicating a mid-career workforce.</li>
+                    <li class="mb-3">Balanced gender ratio helps maintain diversity.</li>
+                    <li class="mb-3">Most employees have completed higher education in fields like Engineering and Business.</li>
+                    <li class="mb-3">70% of employees report a positive work-life balance.</li>
+                </ul>
+                <p class="text-gray-300">
+                    Understanding these factors allows management to create targeted programs for professional development and 
+                    employee satisfaction.
+                </p>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="animate__animated animate__fadeInRight">
+                <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-medium text-orange-400 text-center mb-4">Age Distribution Chart</h3>
+                    <img src="{{ url_for('static', filename='charts/age_distribution.png') }}" alt="Age Distribution"
+                         class="w-full rounded-lg transition transform hover:scale-105 duration-300">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Additional Insights Section -->
+    <section class="py-16 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-orange-400 mb-12 animate__animated animate__fadeInDown">
+                Further Demographic Analysis
+            </h2>
+            
+            <!-- Cards for Different Demographic Data -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Education Chart -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold text-orange-400 mb-4">Education Level Distribution</h3>
+                    <img src="{{ url_for('static', filename='charts/education_level.png') }}" alt="Education Level"
+                         class="w-full rounded-lg mb-4 transition transform hover:scale-105 duration-300">
+                    <p class="text-gray-300">
+                        The majority of our employees hold a Bachelor’s or Master’s degree, with specialized knowledge in Engineering and Business.
+                    </p>
+                </div>
+
+                <!-- Work-Life Balance -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold text-orange-400 mb-4">Work-Life Balance</h3>
+                    <img src="{{ url_for('static', filename='charts/work_life_balance.png') }}" alt="Work-Life Balance"
+                         class="w-full rounded-lg mb-4 transition transform hover:scale-105 duration-300">
+                    <p class="text-gray-300">
+                        Approximately 70% of employees report a satisfactory work-life balance, contributing to higher retention and productivity rates.
+                    </p>
+                </div>
+
+                <!-- Gender Ratio -->
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+                    <h3 class="text-xl font-semibold text-orange-400 mb-4">Gender Ratio</h3>
+                    <img src="{{ url_for('static', filename='charts/gender_ratio.png') }}" alt="Gender Ratio"
+                         class="w-full rounded-lg mb-4 transition transform hover:scale-105 duration-300">
+                    <p class="text-gray-300">
+                        We maintain a balanced gender ratio, with nearly equal representation of male and female employees, supporting diversity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <footer class="bg-gray-900 py-12 text-center">
+        <p class="text-gray-300 text-lg">
+            Learn more about our workforce by exploring the <a href="/performance" class="text-orange-400 hover:text-orange-500 underline">Performance Analysis</a> page.
+        </p>
+    </footer>
+</div>
+
+<!-- Add additional CSS to enhance styles -->
+<style>
+    .hero {
+        background-image: url('/static/images/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(255, 133, 27, 0.3);
+    }
+    img:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+    .hover\:scale-105:hover {
+        transform: scale(1.05);
+    }
+    .hover\:shadow-xl:hover {
+        box-shadow: 0 4px 14px rgba(255, 133, 27, 0.3);
+    }
+</style>
+
+{% endblock %}
