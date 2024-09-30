@@ -1,6 +1,122 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<h2>Satisfaction and Work-Life Balance</h2>
-<img src="{{ url_for('static', filename='charts/work_life_vs_job_satisfaction.png') }}" alt="Work-life Balance vs Job Satisfaction">
-<p>Insights into how employees perceive their work-life balance compared to job satisfaction.</p>
+<!-- Hero Section with Gradient Overlay -->
+<section class="hero py-24 h-[80vh]"
+    style="background-image: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Business_Analysis_And_Why_Every_Company_Needs_A_Business_Analyst.jpg'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-6 text-center relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-orange-200 opacity-75"></div>
+        <h1 class="relative text-8xl font-bold text-orange-600 animate__animated animate__fadeInDown"
+            style="text-shadow: 2px 2px 5px gray;">
+            Satisfaction and Work-Life Balance
+        </h1>
+        <p
+            class="relative mt-10 text-white font-bold text-lg text-gray-900 max-w-2xl mx-auto bg-orange-600 bg-opacity-80 rounded-lg p-6 animate__animated animate__fadeInUp">
+            Explore insights into how employees perceive their work-life balance compared to job satisfaction, and discover strategies to enhance both aspects for a healthier workplace.
+        </p>
+    </div>
+</section>
+
+<!-- Work-Life Balance vs Job Satisfaction Section -->
+<section class="py-20 bg-gray-800 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Work-Life Balance vs Job Satisfaction</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This graph provides insights into how employees perceive their work-life balance compared to their job satisfaction levels.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft">
+                <img src="{{ url_for('static', filename='charts/work_life_vs_job_satisfaction.png') }}"
+                    alt="Work-life Balance vs Job Satisfaction"
+                    class="rounded-lg transition transform hover:scale-105 duration-300">
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight">
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The graph illustrates the relationship between work-life balance and job satisfaction among employees. 
+                    A positive correlation indicates that employees who feel they have a good work-life balance are more likely to report higher job satisfaction.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Job Satisfaction Over Time Section -->
+<section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Job Satisfaction Over Time</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This chart depicts the trend of job satisfaction levels over the past few years, showcasing any significant changes in employee sentiment.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft">
+                <img src="{{ url_for('static', filename='charts/job_satisfaction_over_time.png') }}"
+                    alt="Job Satisfaction Over Time"
+                    class="rounded-lg transition transform hover:scale-105 duration-300">
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight">
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The job satisfaction over time chart reveals that overall employee satisfaction has fluctuated. 
+                    Understanding the underlying factors for these changes can help management improve employee morale.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Work-Life Balance Satisfaction Comparison Section -->
+<section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Work-Life Balance Satisfaction Comparison</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This graph compares employees' satisfaction levels regarding their work-life balance across different departments.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft">
+                <img src="{{ url_for('static', filename='charts/work_life_balance_department_comparison.png') }}"
+                    alt="Work-Life Balance Satisfaction Comparison"
+                    class="w-full max-w-3xl shadow-lg rounded-lg animate__animated animate__fadeInUp">
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight">
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The comparison graph highlights disparities in work-life balance satisfaction across departments. 
+                    Identifying departments with lower satisfaction can guide targeted interventions and improvements.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Insights Section -->
+<section class="py-20 bg-gray-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Key Insights</h2>
+        <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+            The analysis indicates a strong relationship between work-life balance and job satisfaction. 
+            Fostering an environment that encourages work-life balance can significantly improve employee morale and retention.
+        </p>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Take Action Now</h2>
+        <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto animate__animated animate__fadeInUp">
+            Ready to improve your workplace satisfaction? Contact us today to explore effective strategies to enhance work-life balance and job satisfaction.
+        </p>
+        <a href="#contact" class="mt-8 inline-block bg-orange-500 text-white font-bold py-2 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 animate__animated animate__fadeInUp">
+            Contact Us
+        </a>
+    </div>
+</section>
+
 {% endblock %}

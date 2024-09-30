@@ -1,49 +1,116 @@
-{% extends "base.html" %}
-
-{% block title %}Performance Analysis{% endblock %}
+{% extends 'base.html' %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero py-24 h-[80vh]" style="background-image: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Business_Analysis_And_Why_Every_Company_Needs_A_Business_Analyst.jpg'); background-size: cover; background-position: center;">
-    <div class="container mx-auto px-6 text-center">
-        <h1 class="text-8xl font-bold text-orange-600 animate__animated animate__fadeInDown" style="text-shadow: 2px 2px 5px white;">
-            Performance Analysis
+<!-- Hero Section with Gradient Overlay -->
+<section class="hero py-24 h-[80vh]"
+    style="background-image: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/What_Is_Business_Analysis_And_Why_Every_Company_Needs_A_Business_Analyst.jpg'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-6 text-center relative">
+        <!-- <div class="absolute inset-0 bg-gradient-to-b from-orange-200 opacity-75"></div> -->
+        <h1 class="relative text-8xl font-bold text-orange-600 animate__animated animate__fadeInDown"
+            style="text-shadow: 2px 2px 5px gray;">
+            Employee Performance Analysis
         </h1>
-        <p class="mt-10 text-white font-bold text-lg text-gray-900 max-w-2xl mx-auto bg-orange-600 bg-opacity-80 rounded-lg p-6 animate__animated animate__fadeInUp">
-            Gain insights into employee performance through comprehensive data on job involvement, satisfaction, and ratings. This analysis provides valuable information for optimizing workforce productivity and engagement.
-        </p>   
+        <p
+            class="relative mt-10 text-white font-bold text-lg text-gray-900 max-w-2xl mx-auto bg-orange-600 bg-opacity-80 rounded-lg p-6 animate__animated animate__fadeInUp">
+            Uncover the key insights into employee performance by analyzing job involvement and performance ratings.
+            Understanding these metrics can help in improving work efficiency and retaining top performers.
+        </p>
     </div>
 </section>
 
-<!-- Main Content Section -->
-<div class="mt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Performance Data Analysis Content -->
-    <div class="mb-12">
-        <h2 class="text-4xl font-semibold text-orange-500 mb-4 animate__animated animate__fadeInLeft">
-            Key Performance Metrics
-        </h2>
-        <p class="text-gray-300 text-lg leading-relaxed animate__animated animate__fadeInRight">
-            The performance analysis is based on factors like job involvement, performance rating, and overall satisfaction. These metrics are used to monitor employee progress, drive engagement, and improve productivity across departments.
+<!-- Job Involvement Overview Section -->
+<section class="py-20 bg-gray-800 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Job Involvement Overview</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This chart provides an overview of employee job involvement, highlighting engagement levels and focus among different groups.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft md:mr-8"> <!-- Added margin-right -->
+                <img src="{{ url_for('static', filename='charts/jobInvolvement_overview.png') }}"
+                    alt="Job Involvement Overview"
+                    class="rounded-lg transition transform hover:scale-105 duration-300">
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight md:ml-8"> <!-- Added margin-left -->
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The job involvement overview shows that employees with high involvement are generally more productive and engaged. 
+                    Fostering a culture of engagement can lead to improved performance metrics across teams.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Performance Rating Distribution Section -->
+<section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Performance Rating Distribution</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This graph shows the distribution of performance ratings across the workforce, helping identify areas for improvement and talent retention strategies.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight md:mr-8">
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The performance rating distribution reveals that a majority of employees fall within the "Exceeds Expectations" category. 
+                    This suggests a healthy performance culture, but targeted training for those underperforming may enhance overall productivity.
+                </p>
+            </div>
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft md:ml-8">
+                <img src="{{ url_for('static', filename='charts/performance_rating_chart.png') }}" alt="Performance Rating Distribution"
+                    class="rounded-lg transition transform hover:scale-105 duration-300">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Job Involvement vs Performance Rating Section -->
+<section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Job Involvement vs Performance Rating</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This graph illustrates the relationship between job involvement and performance ratings. It helps managers understand how engagement levels impact overall performance.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center">
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft md:mr-8">
+                <img src="{{ url_for('static', filename='charts/job_involvement_vs_performance_chart.png') }}"
+                    alt="Job Involvement vs Performance Rating"
+                    class="w-full max-w-3xl shadow-lg rounded-lg animate__animated animate__fadeInUp">
+            </div>
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight md:ml-8">
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The relationship graph indicates that higher job involvement correlates positively with performance ratings. 
+                    Fostering a culture of involvement can lead to improved employee performance and satisfaction.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Insights Section -->
+<section class="py-20 bg-gray-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Key Insights</h2>
+        <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+            Our analysis reveals that engaged employees tend to perform better and contribute positively to team dynamics. 
+            Focused efforts on enhancing job involvement can lead to increased performance across the board.
         </p>
     </div>
+</section>
 
-    <!-- Performance Rating Chart (Placeholder) -->
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-12 animate__animated animate__fadeInUp">
-        <h3 class="text-2xl font-semibold text-orange-500 mb-4">Performance Rating Distribution</h3>
-        <div id="performance-rating-chart" class="h-64">
-            <!-- Placeholder for chart -->
-            <canvas id="ratingChart"></canvas>
-        </div>
-    </div>
+ <!-- Call to Action -->
+ <footer class="bg-gray-900 py-12 text-center">
+    <p class="text-gray-300 text-lg">
+        Learn more about our workforce by exploring the <a href="/satisfaction" class="text-orange-400 hover:text-orange-500 underline">Satisfaction Analysis</a> page.
+    </p>
+</footer>
 
-    <!-- Job Involvement Chart (Placeholder) -->
-    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-12 animate__animated animate__fadeInUp">
-        <h3 class="text-2xl font-semibold text-orange-500 mb-4">Job Involvement Overview</h3>
-        <div id="job-involvement-chart" class="h-64">
-            <!-- Placeholder for chart -->
-            <canvas id="involvementChart"></canvas>
-        </div>
-    </div>
-</div>
 {% endblock %}
-
