@@ -115,6 +115,10 @@ def attrition():
 
     employee_data = pd.read_csv('datasets\general_data.csv')
 
+    if employee_data['Attrition'].dtype == 'object':
+        employee_data['Attrition'] = employee_data['Attrition'].apply(lambda x: 1 if x == 'Yes' else 0)
+
+
     # graph: Monthly income by attrition
     plt.figure(figsize=(10,6))
     sns.boxplot(x=general_data['Attrition'], y=general_data['MonthlyIncome'])

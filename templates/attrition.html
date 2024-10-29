@@ -24,12 +24,12 @@
             </p>
         </div>
         <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 animate__animated animate__fadeInLeft md:mr-8"> <!-- Added margin-right -->
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft md:mr-8"> 
                 <img src="{{ url_for('static', filename='charts/attrition_vs_income.png') }}"
                     alt="Job Involvement Overview"
                     class="rounded-lg transition transform hover:scale-105 duration-300">
             </div>
-            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight md:ml-8"> <!-- Added margin-left -->
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight md:ml-8"> 
                 <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
                 <p class="mt-4 text-lg text-gray-300">
                     The attrition vs salary graph illustrates that employees with higher salaries tend to have lower attrition rates. This suggests that competitive compensation is a key factor in employee retention. Notably, departments with significant variations in salary also show differing attrition trends, which could indicate the need for targeted salary reviews to address potential retention issues.
@@ -40,10 +40,34 @@
 </section>
 
 <!-- Salary Distribution Section -->
-<section class="py-20 bg-gray-900 text-white">
+<section class="py-20 bg-gray-800 text-white">
+    <div class="container mx-auto px-4">
+        <div class="mb-10 text-center">
+            <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Attrition vs Salary</h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto animate__animated animate__fadeInUp">
+                This graph shows the distribution of salaries within the company, helping to identify variations in pay scales across different roles.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mt-6 md:mt-0 animate__animated animate__fadeInRight md:ml-8"> 
+                <h3 class="text-3xl font-semibold text-orange-400">Analysis</h3>
+                <p class="mt-4 text-lg text-gray-300">
+                    The salary distribution graph reveals how salaries are spread across different positions within the company. Analyzing this data helps management understand where inequities may exist and allows for necessary adjustments to retain top talent and maintain overall employee satisfaction.
+                </p>
+            </div>
+            <div class="md:w-1/2 animate__animated animate__fadeInLeft md:mr-8"> 
+                <img src="{{ url_for('static', filename='charts/salary_distribution.png') }}" alt="Salary Distribution"
+                    class="rounded-lg transition transform hover:scale-105 duration-300">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Salary Distribution Section -->
+<!-- <section class="py-20 bg-gray-900 text-white">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-between">
-            <!-- Left Side - Graph -->
+            
             <div class="w-full md:w-1/2 mb-10">
                 <div class="mb-10 text-center">
                     <h2 class="text-5xl font-semibold text-orange-500 animate__animated animate__fadeInUp">Salary Distribution</h2>
@@ -56,7 +80,7 @@
                         class="w-full rounded-lg transition transform hover:scale-105 duration-300">
                 </div>
             </div>
-            <!-- Right Side - Analysis Content -->
+          
             <div class="w-full md:w-1/2 mb-10">
                 <h3 class="text-4xl font-semibold text-orange-500">Analysis</h3>
                 <p class="mt-4 text-lg text-gray-300">
@@ -65,7 +89,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Key Insights Section -->
 <section class="py-20 bg-gray-800 text-white">
